@@ -26,4 +26,40 @@ document.addEventListener('DOMContentLoaded', function() {
     // Inicia a troca automática de slides
     setInterval(mostrarProximoSlide, tempoDeSlide);
 
+    // --- LÓGICA PARA MÚLTIPLOS SLIDERS INDEPENDENTES ---
+    const todosOsSliders = document.querySelectorAll('.slider-container');
+
+    todosOsSliders.forEach(slider => {
+        const track = slider.querySelector('.slider-track');
+        const slides = Array.from(track.children);
+        const nextButton = slider.querySelector('.next-button');
+        const prevButton = slider.querySelector('.prev-button');
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        let currentIndex = 0;
+
+        // Função para mover o slide
+        const moveToSlide = (targetIndex) => {
+            track.style.transform = 'translateX(-' + slideWidth * targetIndex + 'px)';
+            currentIndex = targetIndex;
+        };
+
+        // Evento do botão "Próximo"
+        nextButton.addEventListener('click', () => {
+            let proximoIndex = currentIndex + 1;
+            if (proximoIndex > slides.length - 1) {
+                proximoIndex = 0; // Volta para o primeiro
+            }
+            moveToSlide(proximoIndex);
+        });
+
+        // Evento do botão "Anterior"
+        prevButton.addEventListener('click', () => {
+            let anteriorIndex = currentIndex - 1;
+            if (anteriorIndex < 0) {
+                anteriorIndex = slides.length - 1; // Vai para o último
+            }
+            moveToSlide(anteriorIndex);
+        });
+    });
+
 });
