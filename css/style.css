@@ -499,3 +499,20 @@ footer {
     font-style: italic;
     opacity: 0.7;
 }
+
+/* --- Ajuste Responsivo para o Texto e Slideshow da Capa --- */
+@media (max-width: 768px) {
+
+    /* AQUI ESTÁ A CORREÇÃO PRINCIPAL */
+    #inicio {
+        height: 70vh; /* Reduz a altura da seção em telas menores */
+    }
+
+    .slide-overlay h2 {
+        font-size: 32px;
+    }
+
+    .slide-overlay p {
+        font-size: 18px;
+    }
+}
