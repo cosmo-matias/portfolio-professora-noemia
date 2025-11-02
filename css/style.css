@@ -128,3 +128,75 @@ main {
         display: flex;
     }
 }
+
+/* --- Estilo da Seção de Início (Slide Show) --- */
+
+#inicio {
+    height: 100vh; /* Ocupa 100% da altura da tela */
+    position: relative; /* Essencial para posicionar os elementos filhos */
+    overflow: hidden; /* Garante que nada saia dos limites */
+    color: var(--cor-branca);
+}
+
+.slideshow-container {
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover; /* Cobre todo o espaço sem distorcer a imagem */
+    background-position: center center; /* Centraliza a imagem */
+    opacity: 0; /* Todos os slides começam invisíveis */
+    transition: opacity 1.5s ease-in-out; /* Efeito de fade de 1.5 segundos */
+}
+
+.slide.active-slide {
+    opacity: 1; /* O slide ativo fica visível */
+}
+
+/* --- Aplicação das Imagens de Fundo --- */
+/* IMPORTANTE: Troque 'slide1.jpg' pelos nomes reais dos seus arquivos! */
+.slide1 { background-image: url('../images/slide1.jpg'); }
+.slide2 { background-image: url('../images/slide2.jpg'); }
+.slide3 { background-image: url('../images/slide3.jpg'); }
+
+
+/* --- Camada de Sobreposição e Texto --- */
+.slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Camada escura para dar contraste */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slide-overlay h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra no texto para legibilidade */
+}
+
+.slide-overlay p {
+    font-size: 24px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* --- Ajuste Responsivo para o Texto da Capa --- */
+@media (max-width: 768px) {
+    .slide-overlay h2 {
+        font-size: 32px;
+    }
+    .slide-overlay p {
+        font-size: 18px;
+    }
+}
