@@ -268,3 +268,63 @@ main {
         text-align: center;
     }
 }
+/* --- Estilo da Seção Experiência --- */
+
+#experiencia {
+    padding: 80px 0;
+    background-color: var(--cor-secundaria); /* Fundo cinza claro para alternar */
+}
+
+#experiencia h2 {
+    text-align: center;
+    font-size: 36px;
+    color: var(--cor-texto);
+    margin-bottom: 50px;
+}
+
+.experiencia-container {
+    display: grid;
+    /* Cria colunas que se ajustam automaticamente ao espaço disponível */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px; /* Espaço entre os cards */
+}
+
+.experiencia-card {
+    background-color: var(--cor-branca);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experiencia-card:hover {
+    transform: translateY(-8px); /* Efeito de "levantar" o card */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.experiencia-card h3 {
+    color: var(--cor-principal);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.experiencia-card .periodo {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.experiencia-card .funcao,
+.experiencia-card .series {
+    margin-bottom: 10px;
+}
+
+.experiencia-card ul {
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.experiencia-card li {
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
