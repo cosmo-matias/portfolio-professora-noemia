@@ -1,0 +1,73 @@
+/* --- Estilos Globais e Variáveis de Cor --- */
+:root {
+    --cor-principal: #6a8e7f; /* Um verde suave e profissional */
+    --cor-secundaria: #f4f4f4; /* Um cinza bem claro para o fundo */
+    --cor-texto: #333;
+    --cor-branca: #ffffff;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Uma fonte limpa e legível */
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Estilo do Cabeçalho --- */
+header {
+    background-color: var(--cor-branca);
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidade */
+    position: fixed; /* Fixa o cabeçalho no topo */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Garante que o cabeçalho fique sobre outros elementos */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between; /* Coloca o logo na esquerda e o menu na direita */
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+}
+
+.logo {
+    margin: 0;
+    font-size: 24px;
+    color: var(--cor-principal);
+    font-weight: bold;
+}
+
+/* --- Estilo do Menu de Navegação --- */
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Remove as bolinhas da lista */
+}
+
+nav ul li {
+    display: inline-block; /* Coloca os itens do menu um ao lado do outro */
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: var(--cor-texto);
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease; /* Efeito suave na mudança de cor */
+}
+
+nav ul li a:hover {
+    color: var(--cor-principal); /* Muda a cor do link ao passar o mouse */
+}
+
+main {
+    padding-top: 80px; /* Ajuste este valor conforme a altura do seu cabeçalho */
+}
