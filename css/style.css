@@ -383,8 +383,18 @@ main {
 }
 .slide-image img {
     width: 100%;
-    height: auto;
+    /* 1. Defina uma altura fixa. 250px é um bom começo para mobile. */
+    height: 250px;
     display: block;
+
+    /* 2. Esta é a propriedade chave. Ela faz a imagem cobrir a área
+          definida (100% de largura x 250px de altura) sem distorcer. */
+    object-fit: cover;
+
+    /* 3. (Opcional) Você pode usar isso para ajustar o foco da imagem.
+          'center center' é o padrão. Se o assunto estiver mais para cima,
+          você pode usar 'center top'. */
+    object-position: center center;
 }
 .slider-button {
     position: absolute;
