@@ -434,3 +434,68 @@ main {
     font-size: 15px;
     line-height: 1.6;
 }
+
+/* --- Estilo do Rodapé e Contato --- */
+
+footer {
+    background-color: var(--cor-texto); /* Um fundo escuro para o rodapé */
+    color: var(--cor-branca);
+    text-align: center;
+    padding-top: 60px;
+}
+
+#contato {
+    padding-bottom: 60px;
+}
+
+#contato h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+#contato p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Espaço entre os ícones */
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid var(--cor-branca);
+    border-radius: 50%; /* Deixa o ícone perfeitamente redondo */
+    color: var(--cor-branca);
+    font-size: 28px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--cor-principal);
+    transform: translateY(-5px); /* Efeito de levantar o ícone */
+}
+
+/* --- Estilos do Copyright --- */
+.copyright {
+    background-color: #222; /* Um tom um pouco diferente para separar */
+    padding: 20px;
+    font-size: 14px;
+}
+
+.copyright p {
+    margin: 5px 0;
+}
+
+.desenvolvido-por {
+    font-style: italic;
+    opacity: 0.7;
+}
