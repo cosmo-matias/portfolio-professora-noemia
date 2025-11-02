@@ -161,9 +161,10 @@ main {
 
 /* --- Aplicação das Imagens de Fundo --- */
 /* IMPORTANTE: Troque 'slide1.jpg' pelos nomes reais dos seus arquivos! */
-.slide1 { background-image: url('../images/slide1.jpg'); }
-.slide2 { background-image: url('../images/slide2.jpg'); }
-.slide3 { background-image: url('../images/slide3.jpg'); }
+.slide1 { background-image: url('../images/slide1.png'); }
+.slide2 { background-image: url('../images/slide2.png'); }
+.slide3 { background-image: url('../images/slide3.png'); }
+.slide4 { background-image: url('../images/slide4.png'); }
 
 
 /* --- Camada de Sobreposição e Texto --- */
@@ -198,5 +199,72 @@ main {
     }
     .slide-overlay p {
         font-size: 18px;
+    }
+}
+
+/* --- Estilo da Seção Sobre --- */
+
+#sobre {
+    padding: 80px 0;
+    background-color: var(--cor-branca); /* Um fundo branco para contrastar */
+}
+
+#sobre h2 {
+    text-align: center;
+    font-size: 36px;
+    color: var(--cor-texto);
+    margin-bottom: 50px;
+}
+
+.sobre-content {
+    display: flex;
+    align-items: center; /* Alinha a imagem e o texto verticalmente */
+    gap: 50px; /* Cria um espaço entre a imagem e o texto */
+}
+
+.sobre-imagem {
+    flex: 1; /* Define a proporção de espaço que a imagem vai ocupar */
+    max-width: 350px;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* Bordas arredondadas para um visual mais suave */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15); /* Sombra sutil para destacar a foto */
+}
+
+.sobre-texto {
+    flex: 2; /* O texto ocupará o dobro do espaço da imagem */
+}
+
+.sobre-texto h3 {
+    font-size: 28px;
+    color: var(--cor-principal);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.sobre-texto p {
+    font-size: 16px;
+    line-height: 1.7; /* Aumenta o espaçamento entre as linhas para melhor legibilidade */
+    text-align: justify;
+}
+
+
+/* --- Responsividade da Seção Sobre --- */
+@media (max-width: 768px) {
+    .sobre-content {
+        flex-direction: column; /* Coloca a imagem em cima do texto */
+        text-align: center;
+    }
+
+    .sobre-imagem {
+        margin-bottom: 30px;
+        max-width: 300px; /* Um pouco menor no celular */
+    }
+
+    .sobre-texto p {
+        text-align: center;
     }
 }
