@@ -71,3 +71,60 @@ nav ul li a:hover {
 main {
     padding-top: 80px; /* Ajuste este valor conforme a altura do seu cabeçalho */
 }
+
+/* --- Estilos do Menu Hambúrguer --- */
+.menu-toggle {
+    display: none; /* Escondido por padrão em telas grandes */
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    gap: 5px; /* Espaço entre as barrinhas */
+}
+
+.menu-toggle .bar {
+    background-color: var(--cor-texto);
+    height: 3px;
+    width: 25px;
+    display: block;
+}
+
+/* --- Media Query para Responsividade --- */
+/* Estilos aplicados quando a tela for de 768px de largura ou menor */
+@media (max-width: 768px) {
+
+    /* 1. Esconde o menu de navegação principal */
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 75px; /* Altura do cabeçalho */
+        left: 0;
+        width: 100%;
+        background-color: var(--cor-branca);
+        flex-direction: column; /* Itens do menu em coluna */
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    /* 2. Classe que será adicionada via JS para mostrar o menu */
+    nav ul.menu-ativo {
+        display: flex;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 20px;
+        border-bottom: 1px solid var(--cor-secundaria);
+    }
+
+    /* 3. Mostra o botão do menu hambúrguer */
+    .menu-toggle {
+        display: flex;
+    }
+}
